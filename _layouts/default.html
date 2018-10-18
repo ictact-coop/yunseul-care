@@ -7,12 +7,16 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     {% if google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification }}" />{% endif %}
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="alternate" href="{{ site.url }}/en" hreflang="en">
   </head>
   <body{% if page.url %} class="{{ page.url | replace:'/',' ' | lstrip | rstrip }}{% if page.url == '/' %}front{% endif %}"{% endif %}>
 
+    {% include header.html %}
+
     {{ content }}
 
+    {% include footer.html %}
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script type='text/javascript' src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
