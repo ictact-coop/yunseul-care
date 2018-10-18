@@ -30,3 +30,8 @@ http://getbootstrap.com/docs/4.1/components/carousel/
 
 파일 위치별 기본 값 정의
 https://jekyllrb.com/docs/step-by-step/09-collections/#front-matter-defaults
+
+https://www.netlify.com/
+https://www.netlifycms.org/
+
+https://cloudstitch.com/dashboard
