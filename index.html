@@ -30,25 +30,27 @@ layout: default
 </div>
 
 <div class="container">
+  <div class="block_box">
+    <div class="col-md-6 block_title">
+      <p>공지사항</p>
+    </div>
+    <div class="col-md-6 block_title">
+      <p>사회공헌</p>
+    </div>
+  </div>
   <div class="front_box">
-      <div class="notice_block">
-        <div class="block_title">
-          <p>공지사항</p>
-        </div>
+      <div class="col-md-6 text_box">
         <div class="notice_title">
           <ul>
-            {% for notice in site.notice %}
+            {% for notices in site.notices %}
             <li>
-              <a href="{{ notice.url }}">{{ notice.title }}</a>
+              <a href="{{ notices.url }}">{{ notices.title }}</a>
             </li>
             {% endfor %}
           </ul>
         </div>
       </div>
-      <div class="welfare_block">
-        <div class="block_title">
-          <p>사회공헌</p>
-        </div>
+      <div class="col-md-6 text_box">
         <div class="welfare_title">
           <ul>
             <li>1</li>

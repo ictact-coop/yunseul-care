@@ -4,7 +4,7 @@
 - 회사 소개: /about
 - 공지 사항: /notices
 - 사업 소개: /business
-- 사회 공헌: /corporate-social-responsibility
+- 사회 공헌: /welfare
 - 동행 기업: /partners
 
 콜렉션
@@ -35,3 +35,17 @@ https://www.netlify.com/
 https://www.netlifycms.org/
 
 https://cloudstitch.com/dashboard
+
+TODO
+- [ ] 프론트페이지 만들기
+  - [x] header 설정하기
+  - [ ] footer 설정하기
+- [x] page 설정하기
+- [ ] 클라우드스티치 설정하기
+- [ ] 사업소개 페이지 완성하기
+- [ ] 사회공헌 페이지 완성하기
+- [ ] 동행기업 페이지 완성하기
+- [ ] btn-group 좀 더 알아보기
+- [x] container 구조 수정하기
+- [ ] scss 디렉토리 변경하기 (.gitignore에서 변경 가능)
+- [ ] navbar item에서 현재 페이지 볼드 처리되는걸 header.html를 사용하며 다른곳에도 적용 할 수 있는지 알아보기
