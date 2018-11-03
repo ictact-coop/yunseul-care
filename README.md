@@ -49,3 +49,11 @@ TODO
 - [x] container 구조 수정하기
 - [ ] scss 디렉토리 변경하기 (.gitignore에서 변경 가능)
 - [ ] navbar item에서 현재 페이지 볼드 처리되는걸 header.html를 사용하며 다른곳에도 적용 할 수 있는지 알아보기
+
+```
+쌤플 블로그
+https://rss.blog.naver.com/nvr_design.xml
+
+jquery rss
+https://github.com/sdepold/jquery-rss
+```
