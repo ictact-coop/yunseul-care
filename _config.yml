@@ -5,6 +5,7 @@ description: >-
   윤슬케어 설명글
 baseurl: ""
 url: ""
+naver_blog: http://rss.blog.naver.com/nvr_design.xml
 
 # Build settings
 markdown: kramdown
