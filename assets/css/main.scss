@@ -3,6 +3,9 @@
 /* 로고 컬러 #625a54 #7d93db*/
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+body{
+  padding-top: 56px;
+}
 body *{
   font-family: 'Nanum Gothic', sans-serif;
 }
@@ -19,7 +22,7 @@ body *{
   /* background-color: #8CA4EA; */
 }
 
-.menubar{
+/*.menubar{
   font-size: 1rem;
   display: inline-block;
   padding-top: 0.3125rem;
@@ -36,7 +39,7 @@ body *{
 .menubar a{
   color: #000;
   margin: 1rem;
-}
+} */
 .footer{
   background-color: #7d93db;
   margin-top: 3rem;
