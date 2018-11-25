@@ -2,12 +2,89 @@
 title: 회사소개
 layout: default
 ---
-<div class="container">
-  <div class="page_top">
-    <h2>{{ page.title }}</h2>
-  </div>
-  <div class="about_content">
-    <p>회사소개 입니다. 소개가 이 페이지에 적히게 됩니다.</p>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-  </div>
+<div class="about">
+  <section id="title"">
+    <div class="container text-center py-5">
+      <h1 class="title en">yunseul care</h1>
+      <h1 class="title ko">주식회사 {{ site.title }}</h1>
+    </div>
+  </section>
+  <section id="title-description" class="py-3">
+    <div class="container">
+      <h2 class="py-3">{{ site.title }}</h2>
+      <div class="row">
+        <div class="col">
+          <p class="lead">하나의 반짝임은 눈부심에 그치지만<br>
+          작은 반짝임이 모여 아름다운 윤슬*을 만들듯<br>
+          사회 곳 곳에 산재되어 있는<br>
+          암환자를 위한 마음과 서비스를 모아<br>
+          아름다운 투병환경을 만들고자 하는 뜻을 담았습니다.</p>
+          <p class="lead">*윤슬 : [명사] 햇빛이나 달빛에 비치어 반짝이는 잔물결<br>
+          케어 [CARE] : [명사] 돌봄, 보살핌</p>
+        </div>
+        <div class="col">
+          <ul class="list-unstyled">
+            <li>
+              <img class="my-3" src="/assets/img/wave.png" alt="wave">
+              <p class="lead">윤슬의 잔물결을 형상화</p>
+            </li>
+            <li>
+              <img class="my-3" src="/assets/img/a.png" alt="a" style="height: 40px;">
+              <p class="lead">투병환경과 삶의 질 향상의 방향성</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="mission-vision" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3>Mission</h3>
+          <blockquote class="blockquote">“누구에게나 열려있는 동등한 치료의 기회”</blockquote>
+        </div>
+        <div class="col">
+          <h3>Vision</h3>
+          <blockquote class="blockquote">“환자의 가치관을 반영한 치료와
+            삶의 질을 높이는 전인적 치료의 보편화”</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="partners">
+    <div class="container">
+      <h2>파트너</h2>
+      <ul class="list-unstyled py-5">
+        <li class="row py-2 mb-3">
+          <div class="col ksepa">
+            <a href="http://www.socialenterprise.or.kr" target="_blank"><img class="img-fluid mb-2" src="/assets/img/ksepa.png" alt="한국사회적기업진흥원" /></a><br>
+            <small>사회적 기업의 설립·운영을 지원하는 고용노동부 산하의 기타공공기관</small>
+          </div>
+          <div class="col">
+            <p class="lead">2018년 「사회적기업가 육성사업」 창업팀 선정</p>
+          </div>
+        </li>
+        <li class="row py-2 mb-3">
+          <div class="col hamkke">
+            <a href="http://hamkke.org/" target="_blank">
+            <img class="img-fluid mb-2" src="/assets/img/hamkke.png" alt="함께일하는재단" /></a><br>
+            <small>「사회적기업가 육성사업」 최우수 창업지원기관, 양질의 일자리 창출을 통해 사회양극화를 해소하고 건강한 사회를 이루는 데 전념해온 민간 공익재단</small>
+          </div>
+          <div class="col">
+            <p class="lead">약제지원 기금의 기부처 및 지원업무 관리 기관</p>
+          </div>
+        </li>
+        <li class="row py-2 mb-3">
+          <div class="col yongma">
+            <a href="http://yongmalogis.co.kr/" target="_blank"><img class="img-fluid mb-2" src="/assets/img/yongma.png" alt="용마로지스" /></a><br>
+            <small>국내 의약품 및 화장품 물류 점유율 1위 기업</small>
+          </div>
+          <div class="col">
+            <p class="lead">2018년 「사회적기업가 육성사업」 창업팀 선정</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 </div>
