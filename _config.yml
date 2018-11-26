@@ -11,6 +11,7 @@ naver_blog: http://rss.blog.naver.com/nvr_design.xml
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
 
 repository:
 
@@ -25,7 +26,6 @@ sass:
 # Exclude from processing.
 exclude:
   - bower_components
-
 
 defaults:
   - scope:

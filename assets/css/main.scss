@@ -8,6 +8,7 @@
 /* 로고 컬러 #625a54 #7d93db */
 $primary: #7d93db;
 $brown: #625a54;
+$light-brown: #c0bcba;
 $white: #fff;
 
 body{
@@ -262,6 +263,17 @@ section {
     background: $primary;
     .title {
       color: $white;
+    }
+  }
+  #overview {
+    background: $brown;
+    p {
+      color: $light-brown;
+      font-family: 'Do Hyeon', sans-serif;
+      font-size: 2.4rem;
+      .text-white {
+        font-family: 'Do Hyeon', sans-serif;
+      }
     }
   }
 }
