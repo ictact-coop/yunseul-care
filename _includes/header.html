@@ -7,20 +7,28 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="/about">회사소개</a>
+          <a class="nav-link{% if page.url == '/about.html' %} active{% endif %}" href="/about">윤슬케어</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/what-we-do">사업소개</a>
+          <a class="nav-link{% if page.url == '/projects.html' %} active{% endif %}" href="/projects">사업소개</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="/welfare">사회공헌</a>
-        </li> -->
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="/partners">동행기업</a>
-        </li> -->
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="/notice">블로그</a>
-        </li> -->
+        <li class="nav-item">
+          <a class="nav-link{% if page.url == '/partners.html' %} active{% endif %}" href="/partners">협력회사</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{% if page.url == '/contact.html' %} active{% endif %}" href="/contact">문의하기</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{% if page.url == '/blog.html' %} active{% endif %}" href="/notice">블로그</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item">
+          <a class="nav-link{% unless page.lang %} active{% endunless %}" href="{{ page.url }}">한글</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{% if page.lang == 'en' %} active{% endif %}" href="{{ page.url }}">English</a>
+        </li>
       </ul>
     </div>
   </div>
