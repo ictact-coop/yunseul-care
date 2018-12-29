@@ -2,8 +2,6 @@
 ---
 
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
-@import url('https://fonts.googleapis.com/css?family=Do+Hyeon&amp;subset=korean');
 
 /* 로고 컬러 #625a54 #7d93db */
 $primary: #7d93db;
@@ -15,7 +13,7 @@ body{
   padding-top: 56px;
 }
 body *{
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 h1, h2, h3, h4, h5 {
   font-family: 'Do Hyeon', sans-serif;
@@ -755,9 +753,6 @@ section {
 }
 
 .about {
-  h2, p, li {
-    font-family: 'Do Hyeon', sans-serif;
-  }
   #title {
     background: $primary;
     .title {
@@ -766,7 +761,6 @@ section {
   }
   #mission-vision {
     blockquote {
-      font-family: 'Do Hyeon', sans-serif;
       color: $primary;
     }
   }
@@ -791,11 +785,18 @@ section {
     background: $brown;
     p {
       color: $light-brown;
-      font-family: 'Do Hyeon', sans-serif;
       font-size: 2.4rem;
-      .text-white {
-        font-family: 'Do Hyeon', sans-serif;
-      }
     }
+  }
+}
+
+.footer {
+  margin-top: 5rem;
+  padding: 1.5rem 0;
+  background-color: $brown;
+  font-size: .9rem;
+  line-height: 1.6;
+  .logo.white {
+    max-width: 200px;
   }
 }

@@ -10,45 +10,22 @@
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="alternate" href="{{ site.url }}/en" hreflang="en">
   </head>
-  <body{% if page.url %} class="{{ page.url | replace:'/',' ' | lstrip | rstrip }}{% if page.url == '/' %}front{% endif %}"{% endif %}>
+  <body{% if page.url %} class="{{ page.url | replace:'/',' ' | replace: '.html', '' | lstrip | rstrip }}{% if page.url == '/' %}front{% endif %}"{% endif %}>
 
     {% include header.html %}
 
     {{ content }}
 
     {% include footer.html %}
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script type='text/javascript' src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
     <![endif]-->
-    <script>
-      WebFontConfig = {
-        google: {
-          families: ['Quicksand:100', 'Roboto:100', 'Lato:100,900']
-        },
-        custom: {
-          families: [
-            'Noto Sans KR:n1,n4,n7',
-            'Nanum Square:n4,n7',
-            'FontAwesome'
-          ],
-          urls: [
-            '//fonts.googleapis.com/earlyaccess/notosanskr.css',
-            '//cdn.jsdelivr.net/font-nanumsquare/1.0.0/nanumsquare.css',
-            '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'
-          ]
-        },
-        active: function() {
-          sessionStorage.fonts = true;
-        }
-      };
-      (function(d) {
-        var wf = d.createElement('script'), s = d.scripts[0];
-        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
-        s.parentNode.insertBefore(wf, s);
-      })(document);
-    </script>
+
+    {% include webfonts.html %}
+
     <script src="//code.jquery.com/jquery-3.1.1.slim.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.2/umd/popper.min.js"></script>
