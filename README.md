@@ -58,6 +58,8 @@ TODO
 - [x] carousel 조사하기
 - [ ] navbar item에서 현재 페이지 볼드 처리되는걸 header.html를 사용하며 다른곳에도 적용 할 수 있는지 알아보기
 
+### 네이버 블로그 RSS 파싱 및 출력
+
 ```
 쌤플 블로그
 https://rss.blog.naver.com/nvr_design.xml
@@ -65,3 +67,7 @@ https://rss.blog.naver.com/nvr_design.xml
 jquery rss
 https://github.com/sdepold/jquery-rss
 ```
+
+### 약재 참고 예시
+
+http://www.bloodcancer.or.kr/sub02/sub022.php
