@@ -1,11 +1,14 @@
 
 title: 윤슬케어
-email: 이메일이다...
+email: hello@yunseul-care.com
 description: >-
   윤슬케어 설명글
 baseurl: ""
 url: ""
-naver_blog: http://rss.blog.naver.com/nvr_design.xml
+
+facebook: https://www.facebook.com/yunseulcare
+instagram: https://www.instagram.com/yunseulcare/
+naver_blog: https://blog.naver.com/yunseul_care
 
 # Build settings
 markdown: kramdown
@@ -13,7 +16,7 @@ plugins:
   - jekyll-feed
   - jekyll-redirect-from
 
-repository:
+repository: ictact-coop/yuenseul-care
 
 collections:
   notices:
@@ -36,6 +39,9 @@ defaults:
 defaults:
   - scope:
       path: ""
-      type: "notices"
     values:
-      layout: "pages"
+      layout: "page"
+  - scope:
+      path: "en"
+    values:
+      lang: "en"

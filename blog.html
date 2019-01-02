@@ -1,9 +1,29 @@
 ---
-layout: pages
+layout: default
 title: 블로그
 scripts:
   - '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js'
   - '//cdnjs.cloudflare.com/ajax/libs/jquery-rss/3.3.0/jquery.rss.min.js'
+  - '//cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js'
 ---
 
-<div id="rss-feeds"></div>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">블로그</h1>
+    <p class="lead">윤슬케어가 만들어가는 꿈을 소개합니다.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+      <div id="rss-feeds"></div>
+    </div>
+    <div class="col-md-2">
+      <h3>category</h3>
+    </div>
+  </div>
+  <div id="pagination-container" class="my-3"></div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css">

@@ -7,7 +7,6 @@
 $primary: #7d93db;
 $brown: #625a54;
 $light-brown: #c0bcba;
-$white: #fff;
 
 body{
   padding-top: 56px;
@@ -232,7 +231,7 @@ h1, h2, h3, h4, h5 {
 }
 .carousel img{
   display:block;
-  max-height: 40rem;
+  max-height: 24rem;
   max-width:100%;
 }
 .mv_area{
@@ -798,5 +797,34 @@ section {
   line-height: 1.6;
   .logo.white {
     max-width: 200px;
+  }
+}
+
+#global-navigation {
+  .nav-link {
+    text-align: center;
+    padding: 0 1.5rem .3rem 1.5rem;
+    &.active {
+      color: $primary;
+      border-bottom: 2px solid $primary;
+    }
+  }
+}
+
+#language-selector {
+  .nav-link {
+    background-color: $brown;
+    color: $white;
+    border-radius: .5rem;
+    margin-right: .5rem;
+    &.active {
+      background-color: $primary;
+    }
+  }
+}
+
+#pagination-container {
+  .paginationjs-pages {
+    float: none;
   }
 }
