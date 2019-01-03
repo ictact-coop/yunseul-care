@@ -9,6 +9,7 @@ $(function(){
       layoutTemplate: '<div class="row">{entries}</div>',
       entryTemplate: '<div class="item"><h3><a href="{url}" target="_blank">{title}</a></h3><p>[{author}@{date}]</p><p>{bodyPlain}</p></div>',
       dateFormat: 'YYYYMMDD',
+      ssl: true,
       success: function(){
         console.log($('#rss-feeds .item').length);
         $('#pagination-container').pagination({
