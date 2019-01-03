@@ -11,12 +11,10 @@ $(function(){
       dateFormat: 'YYYYMMDD',
       ssl: true,
       success: function(){
-        console.log($('#rss-feeds .item').length);
         $('#pagination-container').pagination({
           dataSource: $('#rss-feeds .item').toArray(),
           pageSize: 5,
           callback: function(data, pagination) {
-            console.log(data);
             var html = simpleTemplating(data);
             $('#rss-feeds').html(html);
             var w = $('.paginationjs-pages ul').width();
@@ -31,7 +29,6 @@ $(function(){
 function simpleTemplating(data) {
   var html = '<ul class="list-unstyled">';
   $.each(data, function(index, item){
-    console.log(item);
     html += '<li class="mb-5">'+ item.outerHTML +'</li>';
   });
   html += '</ul>';
