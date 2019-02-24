@@ -1,12 +1,14 @@
 ---
 ---
 
-@import "bootstrap";
-
-/* 로고 컬러 #625a54 #7d93db */
 $primary: #7d93db;
 $brown: #625a54;
 $light-brown: #c0bcba;
+
+@import "bootstrap";
+
+/* 로고 컬러 #625a54 #7d93db */
+
 
 body{
   padding-top: 56px;
@@ -15,9 +17,10 @@ body *{
   font-family: 'Noto Sans KR', sans-serif;
 }
 h1, h2, h3, h4, h5 {
-  font-family: 'Do Hyeon', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   text-transform: uppercase;
 }
+
 .column_title{
   font-size: 1.2rem;
   color: #fff;
@@ -28,106 +31,17 @@ h1, h2, h3, h4, h5 {
   line-height: 2;
   margin-left: 0;
 }
-.navbar{
-  /* background-color: #8CA4EA!important; */
-}
-.navibar{
-  /* margin-top: 2%; */
-}
+
 .navbar img{
   max-width: 200px;
 }
-.navbar-brand{
-  /* background-color: #8CA4EA; */
-}
 
-/*.menubar{
-  font-size: 1rem;
-  display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  margin-right: 1rem;
-  line-height: inherit;
-  white-space: nowrap;
-  flex-direction: row;
-  background-color: #FFF;
-  border: 2px solid #999;
-  margin-bottom: 0;
-}
-
-.menubar a{
-  color: #000;
-  margin: 1rem;
-} */
 .footer{
   background-color: #ccc;
   text-align: center;
   display: block;
 }
-.slide_banner{
-  width: 100%;
-  height: 400px;
-}
-.front_box{
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-.block_box{
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-/*.notice_block{
-  flex: 1;
-  width: 40%;
-  margin-left: 3rem;
-  margin-right: 3rem;
-}
-.welfare_block{
-  flex: 1;
-  width: 40%;
-  margin-left: 3rem;
-  margin-right: 3rem;
-}*/
-.block_title{
-  font-size: 1.5rem;
-  margin: 3%;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-.block_box p{
-  margin-bottom: 0;
-  border-bottom: 1px solid #000;
-  padding-bottom: 1rem;
-}
-.notice_title li, .welfare_title li{
-  /* padding-top: 10px; */
-  display: inline-block;
-  /*white-space: nowrap;*/
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: normal;
-  line-height: 1.5;
-  height: 1.5em;
-  margin-bottom: 5px;
-  margin-top: 5px;
-  width: 90%;
-}
-.text_box{
-  /* border: 2px solid #eee; */
-  margin: 3%;
-  margin-top: 1%;
-}
-.col-md-6 ul{
-  padding-left: 0;
-  margin-top: 1rem;
-}
-.col-md-6 a{
-  color: #000;
-}
+
 .about_content{
   margin-top: 3%;
   margin-bottom: 3%;
@@ -789,6 +703,12 @@ section {
   }
 }
 
+.front {
+  .carousel-item {
+    height: 410px;
+  }
+}
+
 .footer {
   margin-top: 5rem;
   padding: 1.5rem 0;
@@ -802,11 +722,10 @@ section {
 
 #global-navigation {
   .nav-link {
-    text-align: center;
-    padding: 0 1.5rem .3rem 1.5rem;
+    padding: 0 .5rem .3rem .5rem;
+    margin: 0 .5rem;
     &.active {
       color: $primary;
-      border-bottom: 2px solid $primary;
     }
   }
 }
@@ -828,3 +747,4 @@ section {
     float: none;
   }
 }
+

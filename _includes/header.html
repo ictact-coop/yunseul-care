@@ -1,34 +1,36 @@
-<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light border-bottom box-shadow">
   <div class="container">
-    <a class="navbar-brand" href="/"><img src="/logo.png"></a>
+    <a class="navbar-brand mr-md-auto" href="/"><img src="/logo.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul id="global-navigation" class="navbar-nav ml-auto">
-        <li class="nav-item">
+        <li class="nav-item text-lg-center">
           <a class="nav-link{% if page.url contains '/about.html' %} active{% endif %}" href="{% if page.lang == 'en' %}/en{% endif %}/about">{% if page.lang != 'en' %}윤슬케어{% else %}yunseul care{% endif %}</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item text-lg-center">
           <a class="nav-link{% if page.url contains '/projects.html' %} active{% endif %}" href="{% if page.lang == 'en' %}/en{% endif %}/projects">{% if page.lang != 'en' %}사업소개{% else %}projects{% endif %}</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item text-lg-center">
           <a class="nav-link{% if page.url contains '/partners.html' %} active{% endif %}" href="{% if page.lang == 'en' %}/en{% endif %}/partners">{% if page.lang != 'en' %}협력회사{% else %}partners{% endif %}</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item text-lg-center">
           <a class="nav-link{% if page.url contains '/contact.html' %} active{% endif %}" href="{% if page.lang == 'en' %}/en{% endif %}/contact">{% if page.lang != 'en' %}문의하기{% else %}contact{% endif %}</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item text-lg-center">
           <a class="nav-link{% if page.url contains '/blog' %} active{% endif %}" href="{% if page.lang == 'en' %}/en{% endif %}/blog">{% if page.lang != 'en' %}블로그{% else %}blog{% endif %}</a>
         </li>
-      </ul>
-      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex" id="language-selector">
-        <li class="nav-item">
-          <a class="nav-link{% unless page.lang %} active{% endunless %}" href="{{ page.url | replace: '/en/', '/' }}">한글</a>
+        {% unless page.lang %}
+        <li class="nav-item text-lg-center">
+          <small><a class="nav-link" href="/en{{ page.url }}">English</a></small>
         </li>
-        <li class="nav-item">
-          <a class="nav-link{% if page.lang == 'en' %} active{% endif %}" href="/en{{ page.url }}">English</a>
+        {% endunless %}
+        {% if page.lang == 'en' %}
+        <li>
+          <small><a class="nav-link text-lg-center" href="{{ page.url | replace: '/en/', '/' }}">한글</a></small>
         </li>
+        {% endif %}
       </ul>
     </div>
   </div>
