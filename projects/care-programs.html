@@ -6,6 +6,6 @@ title: 프로그램
 <div class="container mt-5 mb-5">
   <h1 class="text-center mb-5">{{ page.title }}</h1>
 	<div class="row">
-    {{ programs.content }}
+    {{ programs.content | markdownify }}
   </div>
 </div>

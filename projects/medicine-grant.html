@@ -5,6 +5,6 @@ title: 약재지원
 <div class="container mt-5 mb-5">
   <h1 class="text-center mb-5">{{ page.title }}</h1>
 	<div class="row">
-    {{ medicineGrant.content }}
+    {{ medicineGrant.content | markdownify }}
   </div>
 </div>
