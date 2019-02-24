@@ -1,0 +1,30 @@
+---
+title: 연혁 및 운영계획
+layout: default
+styles:
+  - /assets/css/timeline.css
+---
+
+{% assign timelines = site.data.timelines %}
+<div class="container mt-5 mb-5">
+  <h1 class="text-center mb-5">{{ page.title }}</h1>
+	<div class="row">
+		<div class="col-md-8 offset-md-2">
+			<ul class="timeline">
+{% for timeline in timelines %}
+				<li>
+          <div class="row">
+            <div class="col-md-4">
+  					  <strong class="when">{{ timeline.when }}</strong>
+            </div>
+            <div class="col-md-8">
+              <strong>{{ timeline.title }}</strong>
+    					<p>{{ timeline.description | markdownify }}</p>
+            </div>
+          </div>
+				</li>
+{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>

@@ -1,49 +1,26 @@
 ---
-title: 동행기업
+title: 협력회사
 layout: default
 ---
+{% assign partners = site.data.partners %}
 <div class="container">
   <div class="page_top">
     <h2>{{ page.title }}</h2>
   </div>
-  <div class="btn-group top_button">
-  <button type="button" class="btn btn-default">
-    전체보기
-  </button>
-  <button type="button" class="btn btn-default">
-    기부단체
-  </button>
-  <button type="button" class="btn btn-default">
-    봉사단체
-  </button>
-  <button type="button" class="btn btn-default">
-    후원기업
-  </button>
-  </div>
-  <div class="row partner_area">
-    <div class="col-md-3 partner_box">
-      <img class="col-md-12 partner_img" src="logo.png">
-      <p class="col-md-12 partner_text">text test of bow</p>
+  <div class="row">
+{% for partner in partners %}
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <a href="{{ partner.url }}" class="mb-4 text-center d-inline-block" target="_blank">
+            <img class="img-fluid col-md-8" src="{{ partner.logo }}" alt="{{ partner.title }}">
+          </a><br>
+          <!-- <strong>{{ partner.title }}</strong> -->
+          <p>{{ partner.description}}</p>
+          <small>{{ partner.role }}</small>
+        </div>
+      </div>
     </div>
-    <div class="col-md-3 partner_box">
-      <img class="col-md-12 partner_img" src="logo.png">
-      <p class="col-md-12 partner_text">text test of bow</p>
-    </div>
-    <div class="col-md-3 partner_box">
-      <img class="col-md-12 partner_img" src="logo.png">
-      <p class="col-md-12 partner_text">text test of bow</p>
-    </div>
-    <div class="col-md-3 partner_box">
-      <img class="col-md-12 partner_img" src="logo.png">
-      <p class="col-md-12 partner_text">text test of bow</p>
-    </div>
-    <div class="col-md-3 partner_box">
-      <img class="col-md-12 partner_img" src="logo.png">
-      <p class="col-md-12 partner_text">text test of bow</p>
-    </div>
-    <div class="col-md-3 partner_box">
-      <img class="col-md-12 partner_img" src="logo.png">
-      <p class="col-md-12 partner_text">text test of bow</p>
-    </div>
+{% endfor %}
   </div>
 </div>

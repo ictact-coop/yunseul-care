@@ -6,21 +6,36 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul id="global-navigation" class="navbar-nav ml-auto">
-        <li class="nav-item text-lg-center">
-          <a class="nav-link{% if page.url contains '/about.html' %} active{% endif %}" href="{% if page.lang == 'en' %}/en{% endif %}/about">{% if page.lang != 'en' %}윤슬케어{% else %}yunseul care{% endif %}</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle{% if page.url contains '/about.html' %} active{% endif %}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            윤슬케어
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/about">회사소개</a>
+            <a class="dropdown-item" href="/plan">운영계획</a>
+            <!-- <a class="dropdown-item" href="#">회사소식</a> -->
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle{% if page.url contains '/projects' %} active{% endif %}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            사업소개
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/projects/medicine-grant">약재지원</a>
+            <a class="dropdown-item" href="/projects/living-diary">투병수첩</a>
+            <a class="dropdown-item" href="/projects/care-programs">프로그램</a>
+          </div>
         </li>
         <li class="nav-item text-lg-center">
-          <a class="nav-link{% if page.url contains '/projects.html' %} active{% endif %}" href="{% if page.lang == 'en' %}/en{% endif %}/projects">{% if page.lang != 'en' %}사업소개{% else %}projects{% endif %}</a>
+          <a class="nav-link{% if page.url contains '/partners.html' %} active{% endif %}" href="/partners">협력회사</a>
         </li>
         <li class="nav-item text-lg-center">
-          <a class="nav-link{% if page.url contains '/partners.html' %} active{% endif %}" href="{% if page.lang == 'en' %}/en{% endif %}/partners">{% if page.lang != 'en' %}협력회사{% else %}partners{% endif %}</a>
+          <a class="nav-link{% if page.url contains '/contact.html' %} active{% endif %}" href="/contact">문의하기</a>
         </li>
         <li class="nav-item text-lg-center">
-          <a class="nav-link{% if page.url contains '/contact.html' %} active{% endif %}" href="{% if page.lang == 'en' %}/en{% endif %}/contact">{% if page.lang != 'en' %}문의하기{% else %}contact{% endif %}</a>
+          <a class="nav-link{% if page.url contains '/blog' %} active{% endif %}" href="/blog">블로그</a>
         </li>
-        <li class="nav-item text-lg-center">
-          <a class="nav-link{% if page.url contains '/blog' %} active{% endif %}" href="{% if page.lang == 'en' %}/en{% endif %}/blog">{% if page.lang != 'en' %}블로그{% else %}blog{% endif %}</a>
-        </li>
+<!--
         {% unless page.lang %}
         <li class="nav-item text-lg-center">
           <small><a class="nav-link" href="/en{{ page.url }}">English</a></small>
@@ -31,6 +46,7 @@
           <small><a class="nav-link text-lg-center" href="{{ page.url | replace: '/en/', '/' }}">한글</a></small>
         </li>
         {% endif %}
+-->
       </ul>
     </div>
   </div>

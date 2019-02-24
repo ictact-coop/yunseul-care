@@ -5,14 +5,82 @@ backend:
 media_folder: "/uploads"
 
 collections:
-  - name: "blog"
-    label: "Blog"
+  - label: "Pages"
+    name: "home"
+    files:
+      - label: "첫 화면"
+        name: "home"
+        file: "_data/home.yml"
+        fields:
+          - label: "이미지 슬라이드"
+            name: "carousels"
+            widget: "list"
+            fields:
+              - {label: 이미지, name: carouselImages, widget: image}
+              - {label: 제목, name: carouselHeader, widget: string}
+              - {label: 설명, name: carouselDescription, widget: string}
+      - label: "연혁 및 운영계획"
+        name: "plans"
+        file: "_data/timelines.yml"
+        fields:
+          - label: "연혁 및 운영계획"
+            name: "timeline-list"
+            widget: "list"
+            fields:
+              - {label: 시기, name: when, widget: string}
+              - {label: 제목, name: title, widget: string}
+              - {label: 설명, name: descrtiption, widget: text}
+      - label: "협력 회사"
+        name: "partners"
+        file: "_data/home.yml"
+        fields:
+          - label: "협력 회사"
+            name: "partners-list"
+            widget: "list"
+            fields:
+              - {label: URL, name: url, widget: string}
+              - {label: 로고, name: logo, widget: image}
+              - {label: 제목, name: title, widget: string}
+              - {label: 설명, name: descrtiption, widget: text}
+              - {label: 역할, name: role, widget: string}
+      - label: "약재지원"
+        name: "medicineGrant"
+        file: "_data/medicineGrant.yml"
+        fields:
+          - { label: '본문', name: 'body', widget: 'markdown' }
+      - label: "투병수첩"
+        name: "diary"
+        file: "_data/diary.yml"
+        fields:
+          - { label: '본문', name: 'body', widget: 'markdown' }
+      - label: "프로그램"
+        name: "programs"
+        file: "_data/programs.yml"
+        fields:
+          - { label: '본문', name: 'body', widget: 'markdown' }
+  - label: "회사 소식"
+    name: "notice"
     folder: "_posts"
     create: true
+    filter: {field: "category", value: "회사 소식"}
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "레이아웃", name: "layout", widget: "hidden", default: "page"}
+      - {label: "제목", name: "title", widget: "string"}
+      - {label: "분류", name: "category", widget: "select", options: ["회사 소식", "이야기"]}
+      - {label: "공개일시", name: "date", widget: "datetime"}
+      - {label: "대표 이미지", name: "thumbnail", widget: "image"}
+      - {label: "본문", name: "body", widget: "markdown"}
+  - label: "블로그"
+    name: "blog"
+    folder: "_posts"
+    create: true
+    filter: {field: "category", value: "이야기"}
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "레이아웃", name: "layout", widget: "hidden", default: "page"}
+      - {label: "제목", name: "title", widget: "string"}
+      - {label: "분류", name: "category", widget: "select", options: ["회사 소식", "이야기"]}
+      - {label: "공개일시", name: "date", widget: "datetime"}
+      - {label: "대표 이미지", name: "thumbnail", widget: "image"}
+      - {label: "본문", name: "body", widget: "markdown"}

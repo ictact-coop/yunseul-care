@@ -35,13 +35,3 @@ defaults:
       path: ""
     values:
       layout: "default"
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "page"
-  - scope:
-      path: "en"
-    values:
-      lang: "en"

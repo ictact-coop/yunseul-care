@@ -2,18 +2,23 @@
 layout: default
 ---
 
+{% assign slides = site.data.home.carousels %}
 <div id="slide_banner" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#slide_banner" data-slide-to="0" class="active"></li>
-    <li data-target="#slide_banner" data-slide-to="1"></li>
+{% for slide in slides %}
+    <li data-target="#slide_banner" data-slide-to="{{ forloop.index0 }}"{% if forloop.first %} class="active"{% endif %}></li>
+{% endfor %}
   </ol>
   <div class="carousel-inner">
-    <div class="carousel-item active" style="background: url('/uploads/front/matheus-ferrero-159633-unsplash.jpg') 30%/cover">
-      <img src="/uploads/front/matheus-ferrero-159633-unsplash.jpg" alt="First slide" style="visibility: hidden;">
+{% for slide in slides %}
+    <div class="carousel-item{% if forloop.first %} active{% endif %}" style="background: url('{{ slide.carouselImages }}') 50%/cover">
+      <img src="{{ slide.carouselImages }}" alt="slide image" style="visibility: hidden;">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>{{ slide.carouselHeader }}</h2>
+        <p>{{ slide.carouselDescription }}</p>
+      </div>
     </div>
-    <div class="carousel-item" style="background: url('/uploads/front/adult-aged-aging-1389104.jpg') 50%/cover">
-      <img src="/uploads/front/adult-aged-aging-1389104.jpg" alt="Third slide" style="visibility: hidden;">>
-    </div>
+{% endfor %}
   </div>
   <a class="carousel-control-prev" href="#slide_banner" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -33,9 +38,9 @@ layout: default
           <div class="card card-body border-primary mb-3">
             <h5 class="card-title">윤슬케어</h5>
             <ul class="list-unstyled">
-              <li>- 회사소개</li>
-              <li>- 운영계획</li>
-              <li>- 회사소식</li>
+              <li>- <a href="/about">회사소개</a></li>
+              <li>- <a href="/plan">운영계획</a></li>
+              <!-- <li>- <a href="/notices">회사소식</a></li> -->
             </ul>
           </div>
         </div>
@@ -43,22 +48,22 @@ layout: default
           <div class="card card-body border-primary mb-3">
             <h5 class="card-title">사업소개</h5>
             <ul class="list-unstyled">
-              <li>- 약재지원</li>
-              <li>- 투병수첩</li>
-              <li>- 프로그램</li>
+              <li>- <a href="/projects/medicine-grant">약재지원</a></li>
+              <li>- <a href="/projects/living-diary">투병수첩</a></li>
+              <li>- <a href="/projects/care-programs">프로그램</a></li>
             </ul>
           </div>
         </div>
       </div>
+{% assign partners = site.data.partners %}
       <div class="row">
         <div class="col-lg-6">
           <div class="card card-body border-primary mb-3">
             <h5 class="card-title">협력회사</h5>
             <ul class="list-unstyled">
-              <li>- 한국사회적기업진흥원</li>
-              <li>- 함께일하는재단</li>
-              <li>- 용마로지스</li>
-              <li>- 마이리얼짐</li>
+{% for partner in partners %}
+              <li>- <a href="{{ partner.url }}" target="_blank">{{ partner.title  }}</a></li>
+{% endfor %}
             </ul>
           </div>
         </div>
@@ -77,9 +82,10 @@ layout: default
     <div class="col-md-6">
       <div class="card card-body bg-primary text-white mb-3">
         <h5 class="card-title">새소식</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta doloremque optio aliquam, ratione earum fuga ipsum quos, quo est, doloribus necessitatibus neque laborum nulla veritatis repellendus ut mollitia quia! Sint.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta doloremque optio aliquam, ratione earum fuga ipsum quos, quo est, doloribus necessitatibus neque laborum nulla veritatis repellendus ut mollitia quia! Sint.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta doloremque optio aliquam, ratione earum fuga ipsum quos, quo est, doloribus necessitatibus neque laborum nulla veritatis repellendus ut mollitia quia! Sint.</p>
+        <ul class="list-unstyled">
+{% for post in site.posts %}
+        <p>[{{ post.categories.first }}] <a class="text-white" href="{{ post.url }}">{{ post.title }}</a></p>
+{% endfor %}
       </div>
     </div>
   </div>

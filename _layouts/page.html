@@ -3,9 +3,9 @@ layout: default
 ---
 
 <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  <div class="container text-center">
+    <h1 class="display-4">{{ page.title }}</h1>
+    {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
   </div>
 </div>
 
