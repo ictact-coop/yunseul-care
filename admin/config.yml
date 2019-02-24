@@ -47,17 +47,17 @@ collections:
         name: "medicineGrant"
         file: "_data/medicineGrant.yml"
         fields:
-          - { label: '본문', name: 'body', widget: 'markdown' }
+          - { label: '본문', name: 'content', widget: 'markdown' }
       - label: "투병수첩"
         name: "diary"
         file: "_data/diary.yml"
         fields:
-          - { label: '본문', name: 'body', widget: 'markdown' }
+          - { label: '본문', name: 'content', widget: 'markdown' }
       - label: "프로그램"
         name: "programs"
         file: "_data/programs.yml"
         fields:
-          - { label: '본문', name: 'body', widget: 'markdown' }
+          - { label: '본문', name: 'content', widget: 'markdown' }
   - label: "회사 소식"
     name: "notice"
     folder: "_posts"
