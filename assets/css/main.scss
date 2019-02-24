@@ -12,6 +12,9 @@ $light-brown: #c0bcba;
 
 body{
   padding-top: 56px;
+  img {
+    max-width: 100%;
+  }
 }
 body *{
   font-family: 'Noto Sans KR', sans-serif;
@@ -747,4 +750,3 @@ section {
     float: none;
   }
 }
-
