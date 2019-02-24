@@ -9,6 +9,7 @@
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="alternate" href="{{ site.url }}/en" hreflang="en">
+    <script src="//identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body{% if page.url %} class="{{ page.url | replace:'/',' ' | replace: '.html', '' | lstrip | rstrip }}{% if page.url == '/' %}front{% endif %}"{% endif %}>
 
