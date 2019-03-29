@@ -8,20 +8,23 @@ layout: default
       <div class="row row-eq-height">
         <div class="col-lg-6 d-flex align-items-stretch">
           <div class="card card-body border-primary mb-3">
-            <h5 class="card-title">윤슬케어</h5>
+            {% assign first = site.data.navigation[0] %}{% assign first_sublinks = first.sublinks %}
+            <h5 class="card-title">{{ first.title }}</h5>
             <ul class="list-unstyled">
-              <li>- <a href="/about">회사소개</a></li>
-              <li>- <a href="/plan">운영계획</a></li>
+              {% for item in first_sublinks %}
+              <li>- <a href="{{ item.url }}">{{ item.title }}</a></li>
+              {% endfor %}
             </ul>
           </div>
         </div>
         <div class="col-lg-6 d-flex align-items-stretch">
           <div class="card card-body border-primary mb-3">
-            <h5 class="card-title">사업소개</h5>
+            {% assign second = site.data.navigation[1] %}{% assign second_sublinks = second.sublinks %}
+            <h5 class="card-title">{{ second.title }}</h5>
             <ul class="list-unstyled">
-              <li>- <a href="/projects/medicine-grant">약재지원</a></li>
-              <li>- <a href="/projects/living-diary">투병수첩</a></li>
-              <li>- <a href="/projects/care-programs">프로그램</a></li>
+              {% for item in second_sublinks %}
+              <li>- <a href="{{ item.url }}">{{ item.title }}</a></li>
+              {% endfor %}
             </ul>
           </div>
         </div>
@@ -32,7 +35,7 @@ layout: default
           <div class="card card-body border-primary mb-3">
             <h5 class="card-title">협력회사</h5>
             <ul class="list-unstyled">
-{% for partner in partners %}
+{% for partner in partners limit: 4 %}
               <li>- <a href="{{ partner.url }}" target="_blank">{{ partner.title  }}</a></li>
 {% endfor %}
             </ul>
