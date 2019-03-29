@@ -1,0 +1,26 @@
+- title: 윤슬케어
+  url: /about
+  sublinks:
+    - title: 회사소개
+      url: /about
+    - title: 운영계획
+      url: /plan
+
+- title: 사업소개
+  url: /projects/
+  sublinks:
+    - title: 약재지원
+      url: /projects/medicine-grant
+    - title: 투병수첩
+      url: /projects/living-diary
+    - title: 프로그램
+      url: /projects/care-programs
+
+- title: 협력회사
+  url: /partners
+
+- title: 문의하기
+  url: /contact
+
+- title: 블로그
+  url: /blog
