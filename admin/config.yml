@@ -1,6 +1,6 @@
 backend:
-  # name: test-repo
-  name: git-gateway
+  name: test-repo
+  # name: git-gateway
   branch: master
   accept_roles:
     - admin
@@ -127,7 +127,6 @@ collections:
     create: true
     filter: {field: "category", value: "이야기"}
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    preview_path:
     fields:
       - {label: "레이아웃", name: "layout", widget: "hidden", default: "page"}
       - {label: "제목", name: "title", widget: "string"}
