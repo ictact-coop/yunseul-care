@@ -1,35 +1,77 @@
 backend:
+  # name: test-repo
   name: git-gateway
   branch: master
+  accept_roles:
+    - admin
+    - editor
 
+site_url: https://yunseul-care.com
+publish_mode: editorial_workflow
 media_folder: "/uploads"
 
 collections:
-  - label: "Pages"
-    name: "home"
+  - name: 'site config'
+    label: '사이트 설정'
+    description: "회사명, 주소 등 일반 정보를 관리합니다."
+    delete: false
+    editor:
+      preview: false
     files:
-      - label: "첫 화면"
-        name: "home"
-        file: "_data/home.yml"
+      - label: "사이트 정보"
+        name: "site"
+        file: "_data/site.yml"
         fields:
-          - label: "이미지 슬라이드"
-            name: "carousels"
-            widget: "list"
+          - {label: 회사명, name: title, widget: string}
+          - {label: 주소, name: address, widget: string}
+          - {label: 사업자, name: byline, widget: string}
+          - {label: 카피라이트, name: copyright, widget: string}
+          - {label: 페이스북, name: facebook_url, widget: string}
+          - {label: 인스타그램, name: instagram_url, widget: string}
+          - {label: 네이버블로그, name: naver_blog_url, widget: string}
+      - label: "메뉴 정보"
+        name: "navigation"
+        file: "_data/navigation.yml"
+        widget: "list"
+        fields:
+          - label: "메뉴 항목"
+            name: "menuItem"
+            widget: "object"
             fields:
-              - {label: 이미지, name: carouselImages, widget: image}
-              - {label: 제목, name: carouselHeader, widget: string}
-              - {label: 설명, name: carouselDescription, widget: string}
+              - {label: 제목, name: title, widget: string}
+              - {label: 링크, name: url, widget: string}
+              - label: "서브 메뉴"
+                name: "sublinks"
+                widget: list
+                fields:
+                  - {label: 제목, name: title, widget: string}
+                  - {label: 링크, name: url, widget: string}
+  - name: 'page'
+    label: '페이지'
+    delete: false
+    files:
+      - label: "회사 소개"
+        name: "about"
+        file: "_data/about.yml"
+        fields:
+          - {label: 제목, name: title, widget: string}
+          - {label: 설명, name: descrtiption, widget: text}
+
       - label: "연혁 및 운영계획"
         name: "plans"
         file: "_data/timelines.yml"
         fields:
           - label: "연혁 및 운영계획"
-            name: "timeline-list"
+            name: "timelineList"
             widget: "list"
             fields:
-              - {label: 시기, name: when, widget: string}
-              - {label: 제목, name: title, widget: string}
-              - {label: 설명, name: descrtiption, widget: text}
+              - label: "항목"
+                name: "timelineItem"
+                widget: "object"
+                fields:
+                  - {label: 시기, name: when, widget: string}
+                  - {label: 제목, name: title, widget: string}
+                  - {label: 설명, name: descrtiption, widget: text}
       - label: "협력 회사"
         name: "partners"
         file: "_data/home.yml"
@@ -38,11 +80,15 @@ collections:
             name: "partners-list"
             widget: "list"
             fields:
-              - {label: URL, name: url, widget: string}
-              - {label: 로고, name: logo, widget: image}
-              - {label: 제목, name: title, widget: string}
-              - {label: 설명, name: descrtiption, widget: text}
-              - {label: 역할, name: role, widget: string}
+              - label: "회사"
+                name: "partnerItem"
+                widget: "object"
+                fields:
+                  - {label: 제목, name: title, widget: string}
+                  - {label: URL, name: url, widget: string}
+                  - {label: 로고, name: logo, widget: image}
+                  - {label: 설명, name: descrtiption, widget: text}
+                  - {label: 역할, name: role, widget: string}
       - label: "약재지원"
         name: "medicineGrant"
         file: "_data/medicineGrant.yml"
@@ -58,9 +104,12 @@ collections:
         file: "_data/programs.yml"
         fields:
           - { label: '본문', name: 'content', widget: 'markdown' }
+
   - label: "회사 소식"
     name: "notice"
-    folder: "_posts"
+    description: >
+      회사 소개 아래 목록으로 표시되는 회사 소식 포스트입니다.
+    folder: "_notices"
     create: true
     filter: {field: "category", value: "회사 소식"}
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -71,12 +120,14 @@ collections:
       - {label: "공개일시", name: "date", widget: "datetime"}
       - {label: "대표 이미지", name: "thumbnail", widget: "image"}
       - {label: "본문", name: "body", widget: "markdown"}
+
   - label: "블로그"
     name: "blog"
     folder: "_posts"
     create: true
     filter: {field: "category", value: "이야기"}
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path:
     fields:
       - {label: "레이아웃", name: "layout", widget: "hidden", default: "page"}
       - {label: "제목", name: "title", widget: "string"}
