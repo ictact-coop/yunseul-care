@@ -22,13 +22,13 @@ collections:
         name: "site"
         file: "_data/site.yml"
         fields:
-          - {label: 회사명, name: title, widget: string}
-          - {label: 주소, name: address, widget: string}
-          - {label: 사업자, name: byline, widget: string}
-          - {label: 카피라이트, name: copyright, widget: string}
-          - {label: 페이스북, name: facebook_url, widget: string}
-          - {label: 인스타그램, name: instagram_url, widget: string}
-          - {label: 네이버블로그, name: naver_blog_url, widget: string}
+          - {label: "회사명", name: "title", widget: "string"}
+          - {label: "주소", name: "address", widget: "string"}
+          - {label: "사업자", name: "byline", widget: "string"}
+          - {label: "카피라이트", name: "copyright", widget: "string"}
+          - {label: "페이스북", name: "facebook_url", widget: "string"}
+          - {label: "인스타그램", name: "instagram_url", widget: "string"}
+          - {label: "네이버블로그", name: "naver_blog_url", widget: "string"}
       - label: "메뉴 정보"
         name: "navigation"
         file: "_data/navigation.yml"
